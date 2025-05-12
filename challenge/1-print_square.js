@@ -1,6 +1,7 @@
 #!/usr/bin/node
 /*
     Print a square with the character #
+
     The size of the square must be the first argument of the program.
 */
 
@@ -11,14 +12,14 @@ if (process.argv.length <= 2) {
     process.exit(1);
 }
 
-const size = parseInt(process.argv[2], 10);
+const size = parseInt(process.argv[2], 10); // 🔧 base 10
 
 if (isNaN(size) || size <= 0) {
     process.stderr.write("Invalid size. Please enter a positive integer.\n");
     process.exit(1);
 }
 
+// ✅ Affiche un carré de `size x size`
 for (let i = 0; i < size; i++) {
-    console.log("#".repeat(size));
+    console.log('#'.repeat(size));
 }
-
